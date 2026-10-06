@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bruno Mendonça | Eletricista</title>
+<meta name="description" content="Eletricista residencial, comercial e industrial. Instalações, manutenção elétrica, quadros, iluminação, aterramento e soluções elétricas.">
+<meta property="og:title" content="Bruno Mendonça | Eletricista">
+<meta property="og:description" content="Peça seu orçamento em poucos toques e fale direto pelo WhatsApp.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0f1b2d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230f1b2d'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial' font-weight='800' font-size='28' fill='%23ecebe6'%3EBM%3C/text%3E%3Crect x='14' y='48' width='36' height='4' fill='%23e8894a'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#0f1b2d;--sf:#16253b;--sf2:#1d2f4b;--ln:rgba(214,226,245,.14);--tx:#eef1f6;--mu:#9aa8bd;--ac:#e8894a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{margin:0;max-width:100%;overflow-x:hidden}
+body{background:var(--bg);color:var(--tx);font:400 16px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p{margin:0}
+button,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+/* fundo: luz ambiente lenta + textura fina */
+.amb{position:fixed;inset:-20%;z-index:0;pointer-events:none;background:radial-gradient(40% 35% at 75% 20%,rgba(232,137,74,.11),transparent 70%),radial-gradient(45% 40% at 15% 80%,rgba(110,150,225,.09),transparent 70%);animation:drift 20s ease-in-out infinite alternate;transform:translate3d(0,calc(var(--sy,0)*-.04px),0)}
+.tex{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;background-image:linear-gradient(var(--tx) 1px,transparent 1px),linear-gradient(90deg,var(--tx) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(70% 60% at 70% 20%,#000,transparent);mask-image:radial-gradient(70% 60% at 70% 20%,#000,transparent)}
+@keyframes drift{to{transform:translate3d(-6%,5%,0) scale(1.08)}}.fx{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+main,footer{position:relative;z-index:1}
+.wrap{max-width:680px;margin:0 auto;padding:0 22px}
+section{padding:64px 0}
+.hero{min-height:86vh;min-height:86svh;display:flex;flex-direction:column;justify-content:center;padding:40px 0}
+.logo{display:inline-flex;flex-direction:column;align-items:flex-start;margin-bottom:36px;font-weight:800;font-size:1.5rem;letter-spacing:.04em;line-height:1}
+.logo i{display:block;width:100%;height:4px;background:var(--ac);margin-top:6px}
+h1{font-size:clamp(1.9rem,8vw,2.8rem);font-weight:700;letter-spacing:-.02em;line-height:1.1}
+h1 small{display:block;font-size:.5em;font-weight:500;color:var(--mu);letter-spacing:.02em;margin-top:6px}
+.lead{margin:22px 0 28px;max-width:30ch;font-size:1.15rem;color:#cfd8e6}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:8px;border:1px solid transparent;font-weight:700;font-size:1rem;text-decoration:none;transition:background .2s,transform .12s,border-color .2s}
+.btn:active{transform:translateY(1px)}
+.btn svg{width:18px;height:18px;transition:transform .2s}
+.btn:hover svg{transform:translateX(3px)}
+.btn.p{background:var(--ac);color:#0f1b2d}
+.btn.p:hover{background:#f5a36b}
+.btn.g{border-color:var(--ln);color:var(--tx)}
+.btn.g:hover{border-color:var(--mu)}
+.alt{margin-top:18px;color:var(--mu);font-size:.95rem}
+.alt a{color:var(--tx);text-underline-offset:3px}
+h2{font-size:clamp(1.5rem,6vw,1.9rem);font-weight:700;letter-spacing:-.01em;line-height:1.2}
+/* orçamento conversacional */
+.talk{margin-top:28px;border-top:1px solid var(--ln)}
+.trail{display:grid;gap:0}
+.done{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--ln);color:var(--mu);font-size:.95rem;animation:up .3s ease}
+.done b{color:var(--tx);font-weight:600}
+.done button{background:none;border:0;color:var(--mu);text-decoration:underline;text-underline-offset:3px;padding:6px 0;min-height:44px}
+.step{display:none;padding-top:24px}
+.step.show{display:block;animation:up .35s ease}
+@keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.q{font-size:1.35rem;font-weight:600;letter-spacing:-.01em;margin-bottom:16px;display:block}
+.opts{display:grid;gap:8px}
+.opts.sv{grid-template-columns:1fr 1fr}
+@media (max-width:339px){.opts.sv{grid-template-columns:1fr}}
+.opt{display:flex;align-items:center;gap:12px;min-height:56px;padding:12px 14px;border-radius:8px;border:1px solid var(--ln);background:var(--sf);text-align:left;font-weight:500;transition:border-color .2s,background .2s}
+.opt svg{flex:none;width:22px;height:22px;stroke:var(--mu);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s}
+.opt:hover{border-color:var(--mu)}
+.opt[aria-pressed=true]{border-color:var(--ac);background:rgba(232,137,74,.07)}
+.opt[aria-pressed=true] svg{stroke:var(--ac)}
+.opt[aria-pressed=true]::after{content:"";margin-left:auto;width:8px;height:8px;border-radius:50%;background:var(--ac)}.sv .opt{position:relative}.sv .opt[aria-pressed=true]::after{position:absolute;top:12px;right:12px;margin:0}.sv .opt{flex-direction:column;align-items:flex-start;gap:10px;min-height:88px}
+textarea,input{width:100%;background:var(--sf);border:1px solid var(--ln);border-radius:8px;padding:14px;font-size:16px}
+textarea{min-height:128px;resize:vertical}
+::placeholder{color:#6f7e95}
+.err{color:#f1927f;font-size:.92rem;margin-top:10px;min-height:1.4em}
+.row{display:flex;gap:10px;margin-top:6px}
+.row .btn{flex:1}
+.back{flex:0 0 auto!important;padding:0 18px!important}
+/* serviços editorial */
+.list{margin-top:24px;border-top:1px solid var(--ln)}
+.it{display:grid;grid-template-columns:44px 1fr;gap:4px 8px;padding:18px 0;border-bottom:1px solid var(--ln)}
+.it span{grid-row:span 2;color:var(--ac);font-weight:600;font-size:.9rem;padding-top:3px}
+.it h3{font-size:1.1rem;font-weight:600}
+.it p{color:var(--mu);font-size:.95rem}
+.after{margin-top:28px}.it{transition:padding .25s}.it:hover{padding-left:8px}.beam{position:relative;height:1px;width:200px;max-width:60%;background:var(--ln);margin:0 0 30px;overflow:hidden}.beam::after{content:"";position:absolute;top:0;left:-40%;width:40%;height:1px;background:linear-gradient(90deg,transparent,var(--ac),transparent);animation:beam 7s ease-in-out infinite}@keyframes beam{to{left:100%}}.chips{list-style:none;margin:34px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--mu);font-size:.88rem;font-weight:500}.chips li{display:flex;align-items:center;gap:8px}.chips li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--ac)}.bar{height:2px;background:var(--ln)}.bar i{display:block;height:100%;width:20%;background:var(--ac);transition:width .4s}.prev{margin-top:20px;padding:14px 16px;background:#1b3329;border-radius:12px 12px 2px 12px;font-size:.9rem;line-height:1.5;white-space:pre-wrap;color:#e3efe8;animation:up .35s ease}.prev::before{content:"Prévia do que será enviado";display:block;font-size:.75rem;color:#8db3a0;margin-bottom:6px;font-weight:600}
+/* diferenciais */
+.why{display:grid;gap:26px;margin-top:28px}
+.why h3{font-size:1rem;font-weight:700;margin-bottom:4px;padding-left:14px;border-left:2px solid var(--ac);line-height:1.3}
+.why p{color:var(--mu);padding-left:16px}
+.fin{background:var(--tx);color:#0f1b2d}
+.fin p{color:#4a5870;margin:10px 0 26px;max-width:34ch}.fin .btn.p{background:#0f1b2d;color:#eef1f6}.fin .btn.p:hover{background:#08121f}
+footer{padding:36px 0 96px;border-top:1px solid var(--ln);color:var(--mu);font-size:.92rem;line-height:1.8}
+footer strong{color:var(--tx);font-weight:700;letter-spacing:.04em}
+footer a{color:var(--tx);text-underline-offset:3px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;width:48px;height:48px;border-radius:50%;background:var(--sf);border:1px solid var(--ln);display:grid;place-items:center;transition:opacity .25s,transform .25s,border-color .2s}
+.fab:hover{border-color:var(--mu)}
+.fab svg{width:22px;height:22px;fill:var(--tx)}
+.fab.off{opacity:0;transform:translateY(8px);pointer-events:none}
+.fab .tip{position:absolute;right:56px;white-space:nowrap;background:var(--tx);color:#0f1b2d;font-size:.8rem;font-weight:600;padding:6px 10px;border-radius:6px;opacity:0;pointer-events:none;transition:opacity .2s}
+.fab:hover .tip,.fab:focus-visible .tip{opacity:1}
+.rv{opacity:0;transform:translateY(10px);transition:opacity .5s,transform .5s}
+.rv.v{opacity:1;transform:none}
+@media (min-width:640px){.opts.sv{grid-template-columns:repeat(4,1fr)}.opts.tr{grid-template-columns:repeat(3,1fr)}.why{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}.amb{transform:none}}
+</style>
+</head>
+<body>
+<div class="amb" aria-hidden="true"></div><div class="tex" aria-hidden="true"></div><canvas id="fx" class="fx" aria-hidden="true"></canvas>
+<main>
+<div class="wrap">
+<section class="hero">
+  <div class="logo" role="img" aria-label="BM, Bruno Mendonça">BM<i></i></div>
+  <div class="beam" aria-hidden="true"></div>
+  <h1>Bruno Mendonça<small>Eletricista</small></h1>
+  <p class="lead">Segurança, qualidade e confiança para o seu serviço elétrico.</p>
+  <div><a class="btn p" href="#orcamento" id="start">Solicitar orçamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <p class="alt">ou fale diretamente pelo <a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a></p>
+  <ul class="chips"><li>Residencial</li><li>Comercial</li><li>Industrial</li></ul>
+</section>
+
+<section id="orcamento" style="padding-top:24px">
+  <h2>Peça seu orçamento</h2>
+  <div class="talk" aria-live="polite">
+    <div class="bar" aria-hidden="true"><i id="bi"></i></div>
+    <div class="trail" id="trail"></div>
+    <div class="step" data-k="servico"><span class="q">O que você precisa?</span><div class="opts sv" data-o="s"></div></div>
+    <div class="step" data-k="local"><span class="q">Perfeito. Onde será?</span><div class="opts tr" data-o="l"></div></div>
+    <div class="step" data-k="urgencia"><span class="q">Quando você precisa?</span><div class="opts tr" data-o="u"></div></div>
+    <div class="step" data-k="desc"><label class="q" for="desc">Quer explicar um pouco mais?</label><textarea id="desc" placeholder="Ex.: preciso trocar o quadro de disjuntores porque alguns estão desarmando..."></textarea></div>
+    <div class="step" data-k="nome"><label class="q" for="nome">Como podemos chamar você?</label><input id="nome" autocomplete="given-name" placeholder="Digite seu nome"></div>
+    <div class="prev" id="prev" hidden></div>
+    <p class="err" id="err" role="alert"></p>
+    <div class="row" id="row"><button class="btn g back" id="back" type="button" aria-label="Voltar" hidden>Voltar</button><button class="btn p" id="next" type="button" hidden>Continuar</button></div>
+  </div>
+</section>
+
+<section>
+  <h2>Serviços</h2>
+  <div class="list rv">
+    <div class="it"><span>01</span><h3>Instalações elétricas</h3><p>Residenciais e comerciais</p></div>
+    <div class="it"><span>02</span><h3>Manutenção</h3><p>Preventiva e corretiva</p></div>
+    <div class="it"><span>03</span><h3>Quadros elétricos</h3><p>Distribuição e disjuntores</p></div>
+    <div class="it"><span>04</span><h3>Iluminação</h3><p>Interna e externa</p></div>
+    <div class="it"><span>05</span><h3>Aterramento</h3><p>Aterramento e SPDA</p></div>
+    <div class="it"><span>06</span><h3>Empresas</h3><p>Serviços comerciais e industriais</p></div>
+  </div>
+  <div class="after"><a class="btn g" data-wa="disp" href="#" target="_blank" rel="noopener">Verificar disponibilidade</a></div>
+</section>
+
+<section style="padding-top:8px">
+  <h2>Por que escolher o Bruno?</h2>
+  <div class="why rv">
+    <div><h3>Segurança em primeiro lugar</h3><p>Cada serviço realizado com atenção às condições e necessidades do local.</p></div>
+    <div><h3>Compromisso</h3><p>Atendimento objetivo e combinado com clareza.</p></div>
+    <div><h3>Qualidade</h3><p>Cuidado nos detalhes e execução profissional.</p></div>
+    <div><h3>Atendimento</h3><p>Contato direto com quem realiza o serviço.</p></div>
+  </div>
+</section>
+</div>
+
+<div class="fin"><div class="wrap"><section>
+  <h2>Precisa de um eletricista?</h2>
+  <p>Conte o que está acontecendo e o Bruno responde pelo WhatsApp.</p>
+  <a class="btn p" data-wa href="#" target="_blank" rel="noopener">Falar com Bruno</a>
+</section></div></div>
+</main>
+
+<footer><div class="wrap">
+  <strong>BRUNO MENDONÇA</strong> — Eletricista<br>Residencial, comercial e industrial<br>
+  WhatsApp: <a data-wa href="#" target="_blank" rel="noopener">(11) 94302-9758</a><br>
+  Instagram: <a id="ig" href="#" target="_blank" rel="noopener"></a><br>
+  © 2026 Bruno Mendonça Eletricista
+</div></footer>
+
+<a class="fab" id="fab" data-wa href="#" target="_blank" rel="noopener" aria-label="Falar com Bruno pelo WhatsApp"><span class="tip">Fale comigo pelo WhatsApp</span>
+<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.400 8.600 3.400 15.500c0 2.300.6 4.400 1.700 6.300L3 29l7.400-2c1.800 1 3.800 1.500 5.600 1.500 7 0 12.600-5.600 12.600-12.500S23 3 16 3zm0 22.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-4.400 1.200 1.200-4.300-.3-.4a10 10 0 0 1-1.500-5.300C5.600 9.900 10.300 5.300 16 5.300s10.400 4.600 10.400 10.200S21.700 25.800 16 25.800zm5.700-7.600c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.500 8.500 0 0 1-4.200-3.700c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.100-.9.400s-1.100 1.100-1.100 2.600 1.100 3 1.300 3.200c.2.200 2.200 3.400 5.400 4.700 2 .8 2.800.9 3.800.7.600-.1 1.900-.8 2.200-1.500s.3-1.400.2-1.500-.3-.2-.6-.4z"/></svg></a>
+
+<script>
+const NOME="Bruno Mendonça", WHATSAPP="5511943029758", INSTAGRAM="brunomendoncaeletricista";
+const I={home:'<path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>',tool:'<path d="M14.700 6.300a4 4 0 0 0-5 5L3 18l3 3 6.700-6.700a4 4 0 0 0 5-5l-2.500 2.500-2.500-.5-.5-2.500z"/>',panel:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8v4M15 8v4M9 16h6"/>',bulb:'<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.500c.7.7 1 1.500 1 2.500h6c0-1 .3-1.800 1-2.500A6 6 0 0 0 12 3z"/>',gnd:'<path d="M12 3v10M5 13h14M8 17h8M11 21h2"/>',bld:'<rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/>',fac:'<path d="M3 21V10l6 4V10l6 4V6h6v15z"/>',oth:'<circle cx="6" cy="12" r="1.200"/><circle cx="12" cy="12" r="1.200"/><circle cx="18" cy="12" r="1.200"/>'};
+const SERVICOS=[["home","Instalação"],["tool","Manutenção"],["panel","Quadro elétrico"],["bulb","Iluminação"],["gnd","Aterramento / SPDA"],["bld","Comercial"],["fac","Industrial"],["oth","Outro serviço"]];
+const LOCAIS=["Residencial","Comercial","Industrial"], URG=["O quanto antes","Nesta semana","Posso agendar"];
+const ERROS={servico:"Escolha o serviço que você precisa.",local:"Escolha onde será o serviço.",urgencia:"Diga para quando você precisa.",desc:"Conte um pouco mais sobre o serviço para que o Bruno consiga entender melhor sua necessidade.",nome:"Digite seu nome para o Bruno saber com quem está falando."};
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const base=`https://wa.me/${WHATSAPP}`,wa=t=>`${base}?text=${encodeURIComponent(t)}`;
+$$("[data-wa]").forEach(a=>a.href=wa(a.dataset.wa==="disp"?"Olá, Bruno! Vim pelo seu Instagram e gostaria de saber sobre sua disponibilidade.":"Olá, Bruno! Tudo bem? Vim pelo seu Instagram e gostaria de falar sobre um serviço elétrico."));
+$("#ig").href=`https://instagram.com/${INSTAGRAM}`;$("#ig").textContent="@"+INSTAGRAM;
+
+const steps=$$(".step"),next=$("#next"),back=$("#back"),err=$("#err"),trail=$("#trail"),dados={};
+let cur=0;
+const mk=(g,items,k)=>items.forEach(it=>{const[ic,nm]=Array.isArray(it)?it:[null,it];const b=document.createElement("button");b.type="button";b.className="opt";b.setAttribute("aria-pressed","false");b.innerHTML=(ic?`<svg viewBox="0 0 24 24" aria-hidden="true">${I[ic]}</svg>`:"")+`<span>${nm}</span>`;b.onclick=()=>{$$(".opt",g).forEach(o=>o.setAttribute("aria-pressed","false"));b.setAttribute("aria-pressed","true");dados[k]=nm;err.textContent="";setTimeout(go,240)};g.appendChild(b)});
+mk($('[data-o=s]'),SERVICOS,"servico");mk($('[data-o=l]'),LOCAIS,"local");mk($('[data-o=u]'),URG,"urgencia");
+const rotulo={servico:"Serviço",local:"Local",urgencia:"Prazo",desc:"Detalhes",nome:"Nome"};
+function show(){
+  trail.innerHTML="";
+  steps.slice(0,cur).forEach((s,i)=>{const k=s.dataset.k,v=dados[k],d=document.createElement("div");d.className="done";d.innerHTML=`<span>${rotulo[k]}: <b></b></span><button type="button">Alterar</button>`;$("b",d).textContent=v.length>34?v.slice(0,34)+"…":v;$("button",d).onclick=()=>{cur=i;err.textContent="";show()};trail.appendChild(d)});
+  steps.forEach((s,i)=>s.classList.toggle("show",i===cur));
+  const manual=cur>=3;next.hidden=!manual;back.hidden=!manual;
+  next.textContent=cur===4?"Enviar pelo WhatsApp":"Continuar";$("#bi").style.width=((cur+1)*20)+"%";prevUp();
+}
+function valido(){const k=steps[cur].dataset.k;let v=dados[k];if(k==="desc"||k==="nome")v=$("#"+k).value.trim();if(!v||(k==="desc"&&v.length<5)){err.textContent=ERROS[k];(k==="desc"||k==="nome")&&$("#"+k).focus();return false}dados[k]=v;err.textContent="";return true}
+function go(){if(!valido())return;if(cur<4){cur++;show();const f=$("textarea,input",steps[cur]);f&&setTimeout(()=>f.focus({preventScroll:true}),80)}else enviar()}
+function msg(nm){return `Olá, Bruno! Tudo bem?
+
+Vim pelo seu Instagram e gostaria de solicitar um orçamento.
+
+Nome: ${nm}
+
+Serviço: ${dados.servico}
+
+Local: ${dados.local}
+
+Urgência: ${dados.urgencia}
+
+Descrição:
+${dados.desc}
+
+Gostaria de saber sobre disponibilidade e orçamento.`}
+function prevUp(){const p=$("#prev");p.hidden=cur!==4;if(cur===4)p.textContent=msg($("#nome").value.trim()||"…")}
+$("#nome").addEventListener("input",prevUp);
+function enviar(){window.open(wa(msg(dados.nome)),"_blank","noopener")}
+next.onclick=go;back.onclick=()=>{cur=Math.max(0,cur-1);err.textContent="";show()};
+$$("textarea,input").forEach(e=>e.addEventListener("keydown",ev=>{if(ev.key==="Enter"&&e.tagName==="INPUT"){ev.preventDefault();go()}}));
+show();
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("v");io.unobserve(e.target)}}),{threshold:.12});
+$$(".rv").forEach(e=>io.observe(e));
+/* botão flutuante some durante o orçamento e rodapé */
+const fab=$("#fab"),hide=new Set();
+new IntersectionObserver(es=>es.forEach(e=>{e.isIntersecting?hide.add(e.target.id||"x"):hide.delete(e.target.id||"x");fab.classList.toggle("off",hide.size>0)}),{threshold:.2}).observe($("#orcamento"));
+/* fundo vivo: rede de pontos com pulsos de energia */
+(()=>{const c=$("#fx"),x=c.getContext("2d"),rm=matchMedia("(prefers-reduced-motion:reduce)").matches;let W,H,P=[],PL=[],sy=0,mx=0,my=0,raf,n=0;
+function init(){const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);P=Array.from({length:W<600?28:52},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.4+.7,z:Math.random()*.8+.2}))}
+function frame(){x.clearRect(0,0,W,H);const D=W<600?125:160,ox=mx*18,oy=my*18-sy*.06;
+if(!rm)for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<-30)p.x=W+30;if(p.x>W+30)p.x=-30;if(p.y<-30)p.y=H+30;if(p.y>H+30)p.y=-30}
+const Q=P.map(p=>[p.x+ox*p.z,((p.y+oy*p.z)%H+H)%H]),L=[];
+for(let i=0;i<Q.length;i++)for(let j=i+1;j<Q.length;j++){const d=Math.hypot(Q[i][0]-Q[j][0],Q[i][1]-Q[j][1]);if(d<D){L.push([i,j]);x.strokeStyle=`rgba(232,137,74,${.2*(1-d/D)})`;x.lineWidth=1;x.beginPath();x.moveTo(Q[i][0],Q[i][1]);x.lineTo(Q[j][0],Q[j][1]);x.stroke()}}
+x.fillStyle="rgba(238,241,246,.55)";P.forEach((p,i)=>{x.beginPath();x.arc(Q[i][0],Q[i][1],p.r,0,6.283);x.fill()});
+if(!rm){if(++n%40===0&&L.length&&PL.length<7)PL.push({l:L[Math.floor(Math.random()*L.length)],t:0});
+PL=PL.filter(o=>(o.t+=.018)<1);for(const o of PL){const a=Q[o.l[0]],b=Q[o.l[1]],px=a[0]+(b[0]-a[0])*o.t,py=a[1]+(b[1]-a[1])*o.t;x.beginPath();x.arc(px,py,2.4,0,6.283);x.fillStyle="#f5a36b";x.shadowColor="#e8894a";x.shadowBlur=14;x.fill();x.shadowBlur=0}
+raf=requestAnimationFrame(frame)}}
+init();frame();
+addEventListener("resize",()=>{cancelAnimationFrame(raf);init();frame()});
+addEventListener("scroll",()=>{sy=scrollY},{passive:true});
+addEventListener("pointermove",e=>{mx=e.clientX/W-.5;my=e.clientY/H-.5},{passive:true});
+document.addEventListener("visibilitychange",()=>{if(document.hidden)cancelAnimationFrame(raf);else if(!rm)frame()});
+})();
+/* parallax discreto */
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches)addEventListener("scroll",()=>document.documentElement.style.setProperty("--sy",scrollY),{passive:true});
+</script>
+</body>
+</html>
